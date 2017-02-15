@@ -18,7 +18,9 @@ namespace TroutChat
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Form2 f2 = new TroutChat.Form2();
+            Application.Run(f2);
+            Application.Run(new Form1(f2.getAddress()));
         }
     }
 }

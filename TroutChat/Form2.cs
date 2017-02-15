@@ -12,9 +12,22 @@ namespace TroutChat
 {
     public partial class Form2 : Form
     {
+        private string address;
+
         public Form2()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            address = serverAddress.Text;
+            Close();
+        }
+
+        public string getAddress()
+        {
+            return address;
         }
     }
 }
