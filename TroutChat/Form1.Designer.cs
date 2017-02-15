@@ -28,26 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.chatField = new System.Windows.Forms.TextBox();
+            this.chatLabel = new System.Windows.Forms.Label();
             this.submitButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // chatField
             // 
-            this.textBox1.Location = new System.Drawing.Point(42, 317);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(462, 20);
-            this.textBox1.TabIndex = 0;
+            this.chatField.Location = new System.Drawing.Point(42, 317);
+            this.chatField.Name = "chatField";
+            this.chatField.Size = new System.Drawing.Size(462, 20);
+            this.chatField.TabIndex = 0;
             // 
-            // label1
+            // chatLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(236, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "this should change";
+            this.chatLabel.AutoSize = true;
+            this.chatLabel.Location = new System.Drawing.Point(3, 0);
+            this.chatLabel.Name = "chatLabel";
+            this.chatLabel.Size = new System.Drawing.Size(103, 13);
+            this.chatLabel.TabIndex = 1;
+            this.chatLabel.Text = "Welcome to da chat\n";
             // 
             // submitButton
             // 
@@ -59,16 +61,27 @@
             this.submitButton.UseVisualStyleBackColor = true;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.chatLabel);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(573, 296);
+            this.panel1.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(597, 349);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.submitButton);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.chatField);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -76,9 +89,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox chatField;
+        private System.Windows.Forms.Label chatLabel;
         private System.Windows.Forms.Button submitButton;
+        private System.Windows.Forms.Panel panel1;
     }
 }
-
